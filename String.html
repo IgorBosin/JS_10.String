@@ -76,4 +76,46 @@
 // ------------------------------------ 
       
         
+// Задача №1 Функц для измене.первого символа на заглавный
+// function unFirst(str) {
+//    return str[0].toUpperCase() + str.slice(1);
+// }
+// alert(unFirst('igor'))
+// ------------------------------------ 
+
+
+// Задача №2 Фукнц.возвр бул знач, не чувств к регистру(пров на спам)
+// function checkSpam(str) {
+//  let lowCase = str.toLowerCase();
+//  return lowCase.includes('viagra') || lowCase.includes('xxx')
+// }
+// alert(checkSpam('buy ViAXXX now'))
+// ------------------------------------ 
+
+
+// Задача №3
+// 1.проверка длины строки
+// 2.сравнение длины строки со вторым арг функции(20)
+// 3.если длина строки больше, то через слайс(0,17) выводим ее
+// 4. прибавляем к ней ...
+// 5.если длина строки меньше, то выводим через слайс всю строку
+
+// Вариант 1.
+// function truncate(str, maxlength) {
+//     if (str.length<maxlength) {
+//         return str
+//     } else {
+//         return str.slice(0,maxlength)+"..."
+//     }
+// }
+// alert(truncate("Вот, что мне хотелось бы сказать на эту тему:", 20))
+
+// Вариант 2.
+// function truncate(str, maxlength) {
+//     return (str.length<maxlength) 
+//     ? str
+//     : str.slice(0,maxlength-1)+"…"
+// }
+// alert(truncate("Вот, что мне хотелось бы сказать на эту тему:", 20))
+
         
