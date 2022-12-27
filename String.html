@@ -182,3 +182,34 @@
 // return +str.slice(1);
 // }
 // alert( extractCurrencyValue('$120')) // 120(number)       
+// ------------------------------------ 
+
+      
+// Задача №9. Вернуть инициалы человека с верхн.регистре через точку
+// function abbrevName(name){
+//   let firstSymbol = name[0] // 1-1word
+//   let numberSpace = name.indexOf(' ')
+//   let firstSymbolAfterSpace = name[numberSpace + 1] // 1-2word
+//   return `${firstSymbol.toUpperCase()}.${firstSymbolAfterSpace.toUpperCase()}`
+// }
+// alert(abbrevName('Sam Harris'))
+
+
+// function abbrevName(name){
+// var nameArray = name.split(" ");
+// return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
+// }
+// alert(abbrevName('Sam Harris'))
+
+
+// function abbrevName(name){
+// return name.split(' ').map(i => i[0].toUpperCase()).join('.')
+// }
+// alert(abbrevName('Sam Harris'))
+
+
+// function abbrevName(name){
+//   return name.split(' ').map(x => x.substr(0, 1).toUpperCase()).join('.');
+// }
+// alert(abbrevName('Sam Harris'))
+// ------------------------------------ 
