@@ -419,9 +419,26 @@ String.prototype.isUpperCase = function() {
 console.log('HELLO'.isUpperCase()) // true
 
 
+String.prototype.isUpperCase = function() {
+    return this == this.toUpperCase()
+}
+        
+console.log('HELLOS'.isUpperCase()) // true
+// ------------------------------------  
 
 
 
+// Задача №16. Вернуть КОЛИЧЕСТВО букв(letter) в строке(str)
+        
+function strCount(str, letter) {
+    let a = 0
+    for (let char of str) {
+        if (char == letter) a++
+    }
+    return a
+}
+
+console.log(strCount("Hello", "l")) // 2        
         
         
         
