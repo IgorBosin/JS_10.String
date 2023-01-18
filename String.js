@@ -394,9 +394,42 @@ const stringToNumber = function(str){
     return Number(str);
 }
 console.log(stringToNumber("1234")) // 1234
+-------------------------------------------------------------------------------------------------------------------
 
 
-// Задача №16 Замена первого символа со строчного на заглавный
+// Задача №16 (8 kyu Convert a string to an array) Конвертировать строку в массив
+function stringToArray(string){
+    return string.split(' ')
+}
+console.log(stringToArray("Robin Singh")) // [ 'Robin', 'Singh' ]
+-------------------------------------------------------------------------------------------------------------------
+
+
+// Задача №17 (8 kyu Sentence Smash) Преобразовать массив в строку
+function smash (words) {
+    return words.join(' ')
+};
+console.log(smash(["hello", "world"])) // hello world
+-------------------------------------------------------------------------------------------------------------------
+
+
+// Задача №18 (8 kyu A Strange Trip to the Market) Найти фразу в строке
+function isLockNessMonster(s) {
+    return s.includes("tree fiddy") || s.includes( "3.50") || s.includes( "three fifty" )
+}
+console.log(isLockNessMonster("Your girlscout cookies are ready to ship. Your total comes to tree fiddy")) // true
+-------------------------------------------------------------------------------------------------------------------
+
+
+// Задача №19 (8 kyu Reversing Words in a String) Поменять в фразе слова задом наперед
+function reverse(string) {
+    return string.split(' ').reverse().join(' ')
+}
+console.log(reverse('I am an expert at this')) // this at expert an am I
+-------------------------------------------------------------------------------------------------------------------
+
+
+// Задача №20 Замена первого символа со строчного на заглавный
 function unFirst(str) {
     return str[0].toUpperCase() + str.slice(1);
 }
@@ -404,7 +437,7 @@ console.log(unFirst('igor')) // Igor
 -------------------------------------------------------------------------------------------------------------------
 
 
-// Задача №17 Вернуть true/false если str = ('viagra' или 'xxx'). Регистр не важен
+// Задача №21 Вернуть true/false если str = ('viagra' или 'xxx'). Регистр не важен
 function checkSpam(str) {
     let lowCase = str.toLowerCase();
     return lowCase.includes('viagra') || lowCase.includes('xxx')
@@ -413,7 +446,7 @@ console.log(checkSpam('buy ViAXXX now')) // true
 -------------------------------------------------------------------------------------------------------------------
 
 
-// Задача №18 Вернуть первые 'maxlength' символы. Если строка длиннее второго аргумента, то вывести "maxlength' символов и добавить "..."
+// Задача №22 Вернуть первые 'maxlength' символы. Если строка длиннее второго аргумента, то вывести "maxlength' символов и добавить "..."
 // Вариант 1.
 function truncate(str, maxlength) {
     if (str.length<maxlength) {
@@ -422,7 +455,7 @@ function truncate(str, maxlength) {
         return str.slice(0,maxlength)+"..."
     }
 }
-console.log(truncate("Вот, что мне хотелось бы сказать на эту тему:", 20))
+console.log(truncate("Вот, что мне хотелось бы сказать на эту тему:", 20)) // Вот, что мне хотелос...
 
 // Вариант 2.
 function truncate(str, maxlength) {
@@ -430,75 +463,60 @@ function truncate(str, maxlength) {
     ? str
     : str.slice(0,maxlength-1)+"…"
 }
-console.log(truncate("Вот, что мне хотелось бы сказать на эту тему:", 20))
+console.log(truncate("Вот, что мне хотелось бы сказать на эту тему:", 20)) // Вот, что мне хотелос...
 -------------------------------------------------------------------------------------------------------------------
 
 
-// Задача №19. Функция для конвертации числа в строку(1=>'1')
+// Задача №23. Функция для конвертации числа в строку(1=>'1')
 // Вариант 1.
 function convertString(num) {
     return num.toString()
 }
-console.log(convertString(232))
+console.log(convertString(232)) // '232'
 
 // Вариант 2.
 function convertString(num) {
 return String(num);
 }
-console.log(convertString(232))
+console.log(convertString(232)) // '232'
 
 // Вариант 3.
 function convertString(num) {
 return ''+num;
 }
-console.log(convertString(232))
+console.log(convertString(232)) // '232'
 -------------------------------------------------------------------------------------------------------------------
 
 
-// Задача №20. Поиск всех символов(подстроки)в строке(без учет регистр)
-function searcStr (str,target) {
+// Задача №24. Поиск всех символов(подстроки)в строке(без учет регистр)
+function searcStr(str, target) {
     let lowerCaseStr = str.toLowerCase()
     let lowerCaseTarget = target.toLowerCase()
-let pos = 0;
-while (true) {
-  let foundPos = lowerCaseStr.indexOf(lowerCaseTarget, pos);
-  if (foundPos == -1) break;
-  console.log( `Найдено тут: ${foundPos}` );
-  pos = foundPos + 1; // продолжаем со следующей позиции
-}
+    let pos = 0;
+    while (true) {
+        let foundPos = lowerCaseStr.indexOf(lowerCaseTarget, pos);
+        if (foundPos == -1) break;
+        console.log(`Найдено тут: ${foundPos}`);
+        pos = foundPos + 1; // продолжаем со следующей позиции
+    }
 }
 searcStr('Ослик Иа-Иа посмотрел на виадук', 'Иа')
 -------------------------------------------------------------------------------------------------------------------
 
 
-// Задача №21. Выделить число
+// Задача №25. Выделить число
 function extractCurrencyValue(str) {
-return +str.slice(1);
+    return +str.slice(1);
 }
 console.log( extractCurrencyValue('$120')) // 120(number)
 -------------------------------------------------------------------------------------------------------------------
 
 
-// Задача №22. Вернуть имя с доб.Hello, либо Hello Word, если пустая строка
+// Задача №26. Вернуть имя с доб.Hello, либо Hello Word, если пустая строка
 function hello(name) {
     if (name != '' || name != undefined)
-    return `Hello, ${name.slice(0,1).toUpperCase()}${name.slice(1).toLowerCase()}!`
+        return `Hello, ${name.slice(0, 1).toUpperCase()}${name.slice(1).toLowerCase()}!`
     else return "Hello, World!"
 }
 console.log(hello())
--------------------------------------------------------------------------------------------------------------------
-
-
-// Задача №23 (8 kyu String Templates - Bug Fixing #5) принять строку с оператором rest и вернуть строку
-function buildString(...template){
-  return `I like ${template.join(', ')}!`;
-}
--------------------------------------------------------------------------------------------------------------------
-
-
-// Задача №23 (8 kyuSimple Comparison?) сравнить сиволы строки, независимо от типа, если равны, то true
-function add(a, b) {
-    return +a == +b
-}
-console.log(add('1', 1))
 
