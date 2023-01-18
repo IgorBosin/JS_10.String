@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>String</title>
-</head>
-<body>
-    <script>
-// ------------------------------------  
 // Использование обратных ковычек
 // let textOne = 'Hi!\nMy\n\tname\n\t\tIgor'
 // let textTwo = `Hi!
@@ -19,7 +8,8 @@
 // let textHi = 'Hi!'
 // let textAll = `${textHi}, i'm Igor`
 // ------------------------------------ 
-        
+      
+
 // Сравнение строк
 // alert('abcd'>'abc') // true - строка длиннее всегда больше
 // alert('A'>'a') // false - нижний регистр всегда больше верхнего
@@ -480,7 +470,21 @@ console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]
         
 
 function points(games) {
-    games.reduce((output, current) => {
-        return output += current[0] > current[2] ? 3 : current[0] === current[2] ? 1 : 0;
+    return games.reduce(function (acc, item) {
+        return acc += (item[0] > item[2]) ? 3 : (item[0] == item[2]) ? 1 : 0
     }, 0)
 }
+
+console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"])) // 30
+// ------------------------------------  
+
+
+
+// Задача №18. Удалить пробелыв тексте
+
+function noSpace(x){
+return x.replace(/\s/g,'')
+}
+console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B')) // 8j8mBliB8gimjB8B8jlB
+
+
