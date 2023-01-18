@@ -493,4 +493,12 @@ console.log(hello())
 function buildString(...template){
   return `I like ${template.join(', ')}!`;
 }
+-------------------------------------------------------------------------------------------------------------------
+
+
+// Задача №23 (8 kyuSimple Comparison?) сравнить сиволы строки, независимо от типа, если равны, то true
+function add(a, b) {
+    return +a == +b
+}
+console.log(add('1', 1))
 
