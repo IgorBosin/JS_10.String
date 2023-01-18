@@ -491,6 +491,7 @@ console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B')) // 8j8mBliB8gimjB8B8jlB
 
 
 // Задача №19. Вернуть приветсткие с именем (8 kyu Returning Strings)
+
 function greet(name){
 return `Hello, ${name} how are you doing today?`
 }
