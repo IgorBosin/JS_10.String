@@ -489,4 +489,8 @@ console.log(hello())
 -------------------------------------------------------------------------------------------------------------------
 
 
+// Задача №23 (8 kyu String Templates - Bug Fixing #5) принять строку с оператором rest и вернуть строку
+function buildString(...template){
+  return `I like ${template.join(', ')}!`;
+}
 
