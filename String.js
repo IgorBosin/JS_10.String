@@ -519,4 +519,16 @@ function hello(name) {
     else return "Hello, World!"
 }
 console.log(hello())
+-------------------------------------------------------------------------------------------------------------------
 
+
+// Задача №27. 
+
+function findAverage(array) {
+    let arr = array.reduce(function(acc,item){
+        return (acc+item)
+    },0)
+        return arr/array.length
+}
+
+console.log(findAverage([1,2,3,4]))
