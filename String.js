@@ -504,7 +504,7 @@ searcStr('Ослик Иа-Иа посмотрел на виадук', 'Иа')
 -------------------------------------------------------------------------------------------------------------------
 
 
-// Задача №25. Выделить число
+// Задача №25. Строку (валюта+число) превратить в число
 function extractCurrencyValue(str) {
     return +str.slice(1);
 }
@@ -524,11 +524,3 @@ console.log(hello())
 
 // Задача №27. 
 
-function findAverage(array) {
-    let arr = array.reduce(function(acc,item){
-        return (acc+item)
-    },0)
-        return arr/array.length
-}
-
-console.log(findAverage([1,2,3,4]))
