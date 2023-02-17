@@ -543,3 +543,19 @@ console.log(solution('abcde', 'cde')) // true
 console.log(solution('abc', ''))  // true
 console.log(solution('abc', 'b')) // false
 -------------------------------------------------------------------------------------------------------------------
+
+
+// Задача №28. Вернуть true, если первый аргумент четное число, а второй нечетное (8 kyu Opposites Attract)
+// Вариант 1.
+function lovefunc(flower1, flower2) {
+    return (flower2 + flower1) % 2 !== 0
+}
+console.log(lovefunc(1, 4)) //true
+console.log(lovefunc(2, 2)) // false
+
+// Вариант 2.
+function lovefunc(flower1, flower2) {
+    return flower1 % 2 !== flower2 % 2;
+}
+console.log(lovefunc(1, 4)) //true
+console.log(lovefunc(2, 2)) // false
