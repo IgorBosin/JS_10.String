@@ -522,5 +522,24 @@ console.log(hello())
 -------------------------------------------------------------------------------------------------------------------
 
 
-// Задача №27. 
+// Задача №27. Первый аргумент(строка) должен заканчиваться вторым аргументом(строка) (7 kyu String ends with?)
+// Вариант 1.
+function solution(str, ending) {
+    return (
+        ending
+            ? (ending === str.slice(-ending.length))
+            : true
+    )
+}
+console.log(solution('abcde', 'cde')) // true
+console.log(solution('abc', ''))  // true
+console.log(solution('abc', 'b')) // false
 
+// Вариант 2.
+function solution(str, ending) {
+    return str.endsWith(ending);
+}
+console.log(solution('abcde', 'cde')) // true
+console.log(solution('abc', ''))  // true
+console.log(solution('abc', 'b')) // false
+-------------------------------------------------------------------------------------------------------------------
